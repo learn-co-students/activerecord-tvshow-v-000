@@ -75,10 +75,4 @@ describe Show do
       expect(Show.shows_by_alphabetical_order).to eq([@fear_the_walking_dead, @law_and_order, @rick_and_morty, @the_cleveland_show])
     end
   end
-
-
-
-
-
-
 end
