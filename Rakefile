@@ -17,6 +17,10 @@ namespace :db do
     connection_details = YAML::load(File.open('config/database.yml'))
     File.delete(connection_details.fetch('database')) if File.exist?(connection_details.fetch('database'))
   end
+
+  task :seed do
+    require_relative './db/seeds.rb' 
+  end
 end
 
 task :console do
