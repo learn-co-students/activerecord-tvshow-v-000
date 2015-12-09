@@ -1,6 +1,8 @@
 require "bundler/setup"
 
 require 'active_record'
+require 'rake'
+require 'yaml/store'
 
 Bundler.require
 
