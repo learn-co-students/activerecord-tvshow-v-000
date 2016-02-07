@@ -18,3 +18,10 @@ namespace :db do
     File.delete(connection_details.fetch('database')) if File.exist?(connection_details.fetch('database'))
   end
 end
+
+desc "run irb console"
+task :console, :environment do |t, args|
+  ENV['RACK_ENV'] = args[:environment] || 'development'
+
+  exec "irb -r ./config/environment.rb"
+end
