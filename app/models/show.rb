@@ -1,12 +1,4 @@
 class Show < ActiveRecord::Base
-  # attr_accessor :name, :day, :network, :rating
-  #
-  # def initialize(name:, day:, network:, rating:)
-  #   @name = name
-  #   @day = day
-  #   @network = network
-  #   @rating = rating
-  # end
 
   def self.highest_rating
     self.maximum(:rating)
