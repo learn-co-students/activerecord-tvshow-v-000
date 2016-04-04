@@ -1,0 +1,5 @@
+require_relative '../config/environment'
+
+def highest_rating
+	Show.maximum(:rating)
+end
