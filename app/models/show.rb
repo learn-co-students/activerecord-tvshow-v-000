@@ -1,12 +1,30 @@
 class Show < ActiveRecord::Base
     
-#    s = self 
     def self.highest_rating
         self.maximum("rating")
     end
     
-    def self.most_popular_show
+    def self.least_popular_show
+        Show.all.order(rating: :asc).first
+    end  
+    
+     def self.most_popular_show
+        Show.all.order(rating: :desc).first
+    end 
+    
+        def self.lowest_rating
+           self.minimum("rating") 
+        end
         
-        #<Show id: 18, name: "Rick and Morty", day: "Thursday", network: "Adult Swim", rating: 10, season: nil>
+        def self.popular_shows
+            self.where("rating > ?", 5)
+        end
+        
+        def self.ratings_sum
+            self.sum(:rating)
+        end
+        
+        def self.shows_by_alphabetical_order
+            Show.all.order(name: :asc)
         end
 end
