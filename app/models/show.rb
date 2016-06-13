@@ -11,7 +11,7 @@ def can_be_created_with_a_hash_of_attributes
       network: "Adult Swim",
       rating: 10
   }
-  Movie.create(attributes)
+  Show.create(attributes)
 end
 
 end
