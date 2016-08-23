@@ -1,0 +1,33 @@
+class Show < ActiveRecord::Base
+
+  def self.highest_rating
+    Show.maximum(:rating)
+  end
+
+  def self.most_popular_show
+    # SELECT * FROM shows ORDER BY rating DESC LIMIT 1
+    Show.order(rating: :desc).limit(1)[0]
+  end
+
+  def self.lowest_rating
+    Show.minimum(:rating)
+  end
+
+  def self.least_popular_show
+    Show.order(rating: :asc).limit(1)[0]
+  end
+
+  def self.ratings_sum
+    Show.sum(:rating)
+  end
+
+  def self.popular_shows
+    # SELECT * FROM shows WHERE rating > 5
+    Show.order(rating: :desc).limit(2)
+  end
+
+  def self.shows_by_alphabetical_order
+    Show.order(name: :asc)
+  end
+
+end
