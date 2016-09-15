@@ -1,9 +1,6 @@
 require_relative 'config/environment.rb'
 
 namespace :db do
-
-
-
   desc "Migrate the db"
   task :migrate do
     connection_details = YAML::load(File.open('config/database.yml'))
@@ -25,4 +22,3 @@ end
   task :console do
     Pry.start
   end
-  
