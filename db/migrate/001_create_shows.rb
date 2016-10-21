@@ -5,7 +5,8 @@ class CreateShows < ActiveRecord::Migration
       s.string :name
       s.string :network
       s.string :day
-      s.integer :rating 
+      s.integer :rating
+  
     end
   end
 
