@@ -23,11 +23,10 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    shows = Show.where(':ratings > ?', 5).order(":ratings", :desc)
-    shows
+    self.where('rating > ?', 5).flatten
   end
 
   def self.shows_by_alphabetical_order
-    show = Show.order(:name)
+    show = Show.order(:name).flatten
   end
 end
