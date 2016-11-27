@@ -1,5 +1,9 @@
 require_relative 'config/environment.rb'
 
+  task :console do
+    Pry.start
+  end
+
 namespace :db do
 
   desc "Migrate the db"
@@ -11,6 +15,7 @@ namespace :db do
 
   desc "drop and recreate the db"
   task :reset => [:drop, :migrate]
+
 
   desc "drop the db"
   task :drop do
