@@ -5,7 +5,7 @@ def self.highest_rating
 end
 
 def self.most_popular_show
-  Show.find_by highest_rating
+  Show.find_by(:rating => highest_rating)
 end
 
 def self.lowest_rating
@@ -13,7 +13,7 @@ def self.lowest_rating
 end
 
 def self.least_popular_show
-  Show.find_by lowest_rating
+  Show.find_by(:rating => lowest_rating)
 end
 
 def self.ratings_sum
