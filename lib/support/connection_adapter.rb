@@ -1,3 +1,5 @@
+require '/home/satkins16-43771/code/labs/activerecord-tvshow-v-000/config/environment'
+
 class ConnectionAdapter
   attr_reader :adapter, :database
 
@@ -13,4 +15,3 @@ class ConnectionAdapter
     )
   end
 end
-  
