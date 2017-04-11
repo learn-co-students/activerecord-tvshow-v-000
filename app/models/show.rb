@@ -5,6 +5,7 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     Show.order(rating: :DESC).limit(1)[0]
+    #ALTERNATIVELY Show.find_by(rating: self.highest_rating)
   end
 
   def self.lowest_rating
@@ -13,6 +14,7 @@ class Show < ActiveRecord::Base
 
   def self.least_popular_show
     Show.order(rating: :ASC).limit(1)[0]
+    #ALTERNATIVELY Show.find_by(rating: self.lowest_rating)
   end
 
   def self.ratings_sum
