@@ -1,6 +1,9 @@
 require "bundler/setup"
 require 'yaml'
 require 'active_record'
+require 'pry'
+
+require_relative '../app/models/show.rb'
 
 Bundler.require
 
