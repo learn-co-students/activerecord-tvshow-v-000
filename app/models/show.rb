@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
     Show.order("rating DESC").first
   end
   def self.lowest_rating
-    Show.order("rating ASC").first.rating
+    Show.minimum("rating")
   end
   def self.least_popular_show
     Show.order("rating ASC").first
