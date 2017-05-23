@@ -1,7 +1,7 @@
 require "bundler/setup"
 require 'yaml'
 require 'active_record'
-
+# require_relative '../lib/support/connection_adapter.rb'
 Bundler.require
 
 
