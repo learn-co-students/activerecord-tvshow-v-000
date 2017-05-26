@@ -1,3 +1,4 @@
+require_relative 'connection_adapter'
 class ConnectionAdapter
   attr_reader :adapter, :database
 
@@ -13,4 +14,3 @@ class ConnectionAdapter
     )
   end
 end
-  
