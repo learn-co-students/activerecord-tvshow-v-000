@@ -52,8 +52,12 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  activesupport
   database_cleaner
   pry
   rake
   rspec
   sqlite3
+
+BUNDLED WITH
+   1.14.6
