@@ -20,7 +20,7 @@ GEM
     database_cleaner (1.4.1)
     diff-lcs (1.2.5)
     i18n (0.7.0)
-    json (1.8.3)
+    json (1.8.6)
     method_source (0.8.2)
     minitest (5.7.0)
     pry (0.10.1)
@@ -57,3 +57,6 @@ DEPENDENCIES
   rake
   rspec
   sqlite3
+
+BUNDLED WITH
+   1.14.6
