@@ -1,4 +1,5 @@
 require_relative 'config/environment.rb'
+require 'active_record'
 
 namespace :db do
 
