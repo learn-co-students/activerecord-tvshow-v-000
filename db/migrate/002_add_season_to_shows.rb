@@ -1,6 +1,6 @@
 class AddSeasonToShows < ActiveRecord::Migration
   def change
-    add_column :shows, :integer, :string
+    add_column :shows, :season, :string
   end
 end
 
