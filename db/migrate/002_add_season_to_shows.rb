@@ -1,11 +1,7 @@
-class CreateShows < ActiveRecord::Migration
+class AddSeasonToShows < ActiveRecord::Migration
   def change
-    create_table :shows do |t|
-      t.string :name
-      t.string :network
-      t.string :day
-      t.integer  :ratings
-      t.string :season
-    end
+    add_column :shows, :integer, :string
   end
 end
+
+#https://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/add_column
