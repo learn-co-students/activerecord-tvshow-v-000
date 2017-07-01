@@ -3,14 +3,14 @@ require_relative 'config/environment.rb'
 namespace :db do
 
   desc "Migrate the db"
-  task :migrate do
+  task :migrate do #rake db:migrate
     connection_details = YAML::load(File.open('config/database.yml'))
     ActiveRecord::Base.establish_connection(connection_details)
     ActiveRecord::Migrator.migrate("db/migrate/")
   end
 
   desc "drop and recreate the db"
-  task :reset => [:drop, :migrate]
+  task :reset => [:drop, :migrate]  #rake db:reset
 
   desc "drop the db"
   task :drop do
