@@ -22,12 +22,15 @@ class Show < ActiveRecord::Base
 
   def self.popular_shows
     pop_shows_array = Array.new
-    pop_shows_1 = Show.where('rating > ?', 5)[0].name
-    pop_shows_2 = Show.where('rating > ?', 5)[1].name
+    pop_shows_1 = Show.where('rating > ?', 5)[0]
+    pop_shows_2 = Show.where('rating > ?', 5)[1]
     pop_shows_array.push(pop_shows_1)
     pop_shows_array.push(pop_shows_2)
     pop_shows_array
-    binding.pry
   end
+
+  def self.shows_by_alphabetical_order
+    Show.order('name')
+  end 
 
 end
