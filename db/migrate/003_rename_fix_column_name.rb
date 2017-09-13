@@ -4,4 +4,5 @@ class RenameFixColumnName < ActiveRecord::Migration[5.1]
       rename_column :shows, :seasons,:season
   end
 
+  
 end
