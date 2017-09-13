@@ -1,5 +1,10 @@
 require_relative 'config/environment.rb'
 
+  desc "interactive shell mode"
+  task :pry do
+    Pry.start
+  end
+
 namespace :db do
 
   desc "Migrate the db"
