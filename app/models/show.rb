@@ -1,33 +1,37 @@
 class Show < ActiveRecord::Base
 
-  def highest_rating
-    Show.maximum("rating")
+  def self.highest_rating
+    self.maximum("rating")
     #return highest value in the ratings column use maximum method
   end
 
-  def most_popular_show
-    Show.highest_rating
+  def self.most_popular_show
+    self.where("rating = ?", highest_rating).first
     #return show with highest rating. #highest_rating is a helper method
   end
 
-  def lowest_rating
+  def self.lowest_rating
+    self.minimum("rating")
     #returns lowest value in the ratings column
   end
 
-  def least_popular_show
+  def self.least_popular_show
+    self.where("rating = ?", lowest_rating).last
     #returns show with lowest rating. See #most_popular_show
   end
 
-  def ratings_sum
+  def self.ratings_sum
+    self.sum("rating")
     #returns the sum of all ratings
   end
 
-  def popular_shows
-    #returns an array of all the shows that have a rating greater than 5
+  def self.popular_shows
+    self.where("rating > ?", 5)#returns an array of all the shows that have a rating greater than 5
     #use '#where' Active Record method
   end
 
-  def shows_by_alphabetical_order
+  def self.shows_by_alphabetical_order
+    self.order(name: :asc)
     #returns array of all of the shows in alpha order
     #use '#order' AR method
   end
