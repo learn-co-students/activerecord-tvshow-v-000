@@ -1,5 +1,12 @@
 require_relative 'config/environment.rb'
 
+task :console do
+  require 'irb'
+  require 'irb/completion'
+  ARGV.clear
+  IRB.start
+end
+
 namespace :db do
 
   desc "Migrate the db"
