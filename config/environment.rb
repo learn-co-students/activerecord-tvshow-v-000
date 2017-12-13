@@ -4,7 +4,7 @@ require 'active_record'
 
 Bundler.require
 
-
+#require_relative '../app/shows_controller.rb'
 DBNAME = "tvshows"
 
 
