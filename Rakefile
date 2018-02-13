@@ -1,5 +1,18 @@
 require_relative 'config/environment.rb'
 
+#================environment===================  
+task :environment do
+  require_relative 'config/environment'
+end
+#==================console=====================
+desc 'Pry console'
+task :console => :environment do
+  Pry.start 
+end
+# quick exit
+def x;exit!;end
+#==============================================
+
 namespace :db do
 
   desc "Migrate the db"
