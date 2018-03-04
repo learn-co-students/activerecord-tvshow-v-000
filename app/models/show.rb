@@ -1,11 +1,4 @@
-require 'pry'
-
 class Show < ActiveRecord::Base
-
-     # :name
-     # :network
-     # :day
-     # :rating
 
     # return the highest value in the ratings column.
     def self.highest_rating
