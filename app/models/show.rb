@@ -7,7 +7,8 @@ class Show < ActiveRecord::Base
 
     # this method should return the show with the highest rating.
     def self.most_popular_show
-      Show.where("rating = #{highest_rating}").first
+      rating = highest_rating
+      Show.where(rating: rating).first
     end
 
     # returns the lowest value in the ratings column.
@@ -33,7 +34,7 @@ class Show < ActiveRecord::Base
 
     # returns an array of all of the shows sorted by alphabetical order according to their names.
     def self.shows_by_alphabetical_order
-      Show.all.order("name")
+      Show.all.order(:name)
     end
 
 end
