@@ -30,7 +30,7 @@ describe Show do
 
     it "has a season column and attribute added from another migration file" do
       filepath = File.expand_path(File.dirname(File.dirname(__FILE__))) + "/db/migrate"
-      expect(Dir.entries(filepath)).to include("002_add_season_to_shows.rb")
+      expect(Dir.entries(filepath)).to include("20180307070337_add_season_to_show.rb")
     end
   end
 
