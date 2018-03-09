@@ -1,4 +1,13 @@
 require_relative 'config/environment.rb'
+  desc "open pry"
+  task :console => :environment do
+    Pry.start
+  end
+
+  task :environment do
+    require_relative '../config/environment.rb'
+  end
+
 
 namespace :db do
 
