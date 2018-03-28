@@ -1,34 +1,43 @@
 
+class Show < ActiveRecord::Base
 
-  def highest_rating
+  def self.highest_rating
+   self.maximum("rating")
+  end
 
+
+  def self.most_popular_show
+    Show.find_by(rating: self.maximum("rating"))
+
+#Break down.
+# we Go into class(Show) target the rating, then
+# find the highest rating in that collection and return it
+  end
+
+
+  def self.lowest_rating
+    self.minimum("rating")
 
   end
 
 
-  def most_popular_show
+  def self.least_popular_show
+   Show.find_by(rating: self.minimum("rating"))
+  end
 
+  def self.ratings_sum
+    self.sum("rating")
   end
 
 
-  def lowest_rating
+  def self.popular_shows
+    binding.pry
+    self.where(rating > 5)
 
   end
 
-
-  def least_popular_show
-
-  end
-
-  def ratings_sum
+  def self.shows_by_alphabetical_order
 
   end
 
-
-  def popular_shows
-
-  end
-
-  def shows_by_alphabetical_order
-
-  end
+end
