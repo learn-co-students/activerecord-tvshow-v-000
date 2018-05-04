@@ -1,23 +1,28 @@
+require 'pry'
 class Show < ActiveRecord::Base
 
   def self.highest_rating
-    self.maximum(:ratings)
+    self.maximum(:rating)
   end
 
   def self.most_popular_show
-    self.find_by(ratings: self.highest_rating)
+    self.find_by(rating: self.highest_rating)
   end
 
   def self.lowest_rating
-    self.mininum(:ratings)
+    self.minimum(:rating)
   end
 
   def self.least_popular_show
-    self.find_by(ratings: self.lowest_rating)
+    self.find_by(rating: self.lowest_rating)
   end
 
   def self.ratings_sum
-    self.sum(:ratings)
+    self.sum(:rating)
+  end
+
+  def self.popular_shows
+    self.where("rating > 5")
   end
 
   def self.shows_by_alphabetical_order
