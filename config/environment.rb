@@ -3,7 +3,7 @@ require 'yaml'
 require 'active_record'
 
 Bundler.require
-
+require_relative '../app/model/show.rb'
 
 DBNAME = "tvshows"
 
