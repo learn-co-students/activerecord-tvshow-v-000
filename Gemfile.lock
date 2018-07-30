@@ -29,6 +29,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rake (10.4.2)
+    require_all (2.0.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -55,8 +56,9 @@ DEPENDENCIES
   database_cleaner
   pry
   rake (= 10.4.2)
+  require_all
   rspec
   sqlite3
 
 BUNDLED WITH
-   1.16.1
+   1.16.3
