@@ -1,5 +1,15 @@
 require_relative 'config/environment.rb'
 
+def reload!
+  load_all './lib'
+end
+
+# Type `rake -T` on your command line to see the available rake tasks.
+
+task :console do
+  Pry.start
+end
+
 namespace :db do
 
   desc "Migrate the db"
