@@ -5,7 +5,7 @@ require 'active_record'
 Bundler.require
 
 
-DBNAME = "tvshows"
+DBNAME = "shows"
 
 
 Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
