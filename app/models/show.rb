@@ -29,13 +29,21 @@ class Show < ActiveRecord::Base
     self.find_by(rating: lowest_rating)
   end
 
+  #ratings_sum: returns the sum of all of the ratings.
+
   def self.ratings_sum
     self.sum("rating")
   end
 
+  #popular_shows: returns an array of all of the shows that have a rating greater than 5.
+  #hint: use the where Active Record method.
+
   def self.popular_shows
     self.where("rating > 5")
   end
+
+  #shows_by_alphabetical_order: returns an array of all of the shows sorted by alphabetical order according to their names.
+  #hint: use the order Active Record method.
 
   def self.shows_by_alphabetical_order
     self.order(name: :asc)
