@@ -24,6 +24,7 @@ class Show < ActiveRecord::Base #Singular here (Show) & Plural (in migration)
   end
 
   def self.popular_shows
+    binding.pry 
     Show.where('rating > 5')
   end
 
