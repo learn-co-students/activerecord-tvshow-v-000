@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe Show do
+describe "Show" do
 
   after(:each) do
     Show.destroy_all
@@ -12,6 +12,7 @@ describe Show do
     @the_cleveland_show = Show.create(:name => "The Cleveland Show", :day => "Monday", :network => "Fox", :rating => 2)
     @fear_the_walking_dead = Show.create(:name => "Fear the Walking Dead", :day => "Sunday", :network => "AMC", :rating => 3)
   end
+
 
   describe "attributes" do
     it "has data attributes given to it from a migration file" do
