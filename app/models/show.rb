@@ -25,10 +25,13 @@ class Show < ActiveRecord::Base
   end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   def self.shows_by_alphabetical_order
     self.order(:name)
   end
+=======
+>>>>>>> 40afb927291ba5c5df791d12c699f3515cae1685
 =======
 >>>>>>> 40afb927291ba5c5df791d12c699f3515cae1685
 =======
