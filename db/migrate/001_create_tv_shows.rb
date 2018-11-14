@@ -1,8 +1,9 @@
-class CreateTVShows < ActiveRecord::Migration[5.2]
+class CreateTvShows < ActiveRecord::Migration
 
   def change
     create_table :shows do |show|
       show.integer :season
+      show.string :name
       show.timestamps
     end
   end
