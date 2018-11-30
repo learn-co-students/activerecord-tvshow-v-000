@@ -2,6 +2,7 @@ require "bundler/setup"
 require 'yaml'
 require 'active_record'
 
+
 Bundler.require
 
 
@@ -19,3 +20,5 @@ DB = ActiveRecord::Base.establish_connection(connection_details)
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+
