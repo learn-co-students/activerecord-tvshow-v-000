@@ -22,12 +22,12 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    binding.pry
-    show = Show.order(rating: :asc).limit(1)
+    show = Show.where("rating > '5'")
   end
   
-  # def shows_by_alphabetical_order
-  # end
+  def self.shows_by_alphabetical_order
+    show = Show.order(name: :asc)
+  end
 end
 
   
