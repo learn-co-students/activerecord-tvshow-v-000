@@ -1,17 +1,4 @@
-#migration code that creates Shows table 
-# -name(string), -network(string), -day(string), -rating(int) columns 
-
-# Methods: 
-# - highest_rating - return highest value of ratings column 
-# - most popular show - highest rating = helper method 
-# - lowest rating (lowest value in ratings)
-# - least popular show (lowest rating)
-# - ratings sum 
-# - popular shws (returns array of all shows > 5)
-#   use where 
-#   -shows by alphabetical order 
-
-class CreateShows < ActiveRecord::Migration[4.2]
+class CreateShows < ActiveRecord::Migration
  
   def change 
     create_table :shows do |t|
@@ -21,5 +8,5 @@ class CreateShows < ActiveRecord::Migration[4.2]
       t.integer :rating 
     end 
   end
-  
+
 end
