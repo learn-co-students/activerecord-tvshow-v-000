@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2) do
     t.string "network"
     t.string "day"
     t.integer "rating"
-    t.integer "season"
+    t.string "season"
   end
 
 end
