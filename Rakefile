@@ -4,3 +4,8 @@ require 'sinatra/activerecord/rake'
 task :console do
   Pry.start
 end
+
+
+task :console do
+pry.start
+end
