@@ -15,8 +15,6 @@ describe Show do
 
   describe "attributes" do
     it "has data attributes given to it from a migration file" do
-    #TODO: You'll need to create a new migration to add
-    #the necessary columns to the shows table
       expect(@rick_and_morty.name).to eq("Rick and Morty")
       expect(@rick_and_morty.day).to eq("Thursday")
       expect(@rick_and_morty.network).to eq("Adult Swim")
