@@ -4,3 +4,8 @@ require 'sinatra/activerecord/rake'
 task :console do
   Pry.start
 end
+
+desc "Drop into pry"
+task :console do
+  Pry.start
+end
