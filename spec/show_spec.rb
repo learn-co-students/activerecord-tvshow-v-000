@@ -24,6 +24,7 @@ describe Show do
     end
 
     it "has a season" do
+      #binding.pry
       game_of_thrones = Show.create(:name => "Game of Thrones", :day => "Sunday", :season => "Spring", :network => "HBO", :rating => 10)
       expect(game_of_thrones.season).to eq("Spring")
     end
