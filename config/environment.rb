@@ -12,6 +12,8 @@ DB = ActiveRecord::Base.establish_connection({
   database: 'db/tvshows.db'
 })
 
+
+
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
