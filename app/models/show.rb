@@ -1,6 +1,10 @@
 class Show < ActiveRecord::Base
   def self.highest_rating
-    self.maximum("rating")
-    # binding.pry
+    Show.maximum("rating")
+  end
+
+  def self.most_popular_show
+    Show.find(name:)where(rating: 10)
+    binding.pry
   end
 end
