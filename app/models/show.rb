@@ -4,8 +4,6 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-    # # Show.where("rating = 10")
-    # Show.find_by(name: "?", rating: 10)
     Show.where("rating = ?", 10).order(name: :desc).first
     # binding.pry
   end
